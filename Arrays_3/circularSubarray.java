@@ -19,6 +19,7 @@ class circularSubarray{
                 for(int j=0;j<size;j++)
                 System.out.print(arr[(i+j)%n]);
 
+                
                 System.out.println("");
 
             }
