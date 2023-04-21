@@ -5,6 +5,7 @@ class Engine
     private int currentRpm;
     int fuelEfficiency;
     int noOfPistons;
+    static String manufacturer="Honda";
 
     public Engine(boolean isEngineOn,int currentRpm,int rpm,int fuelEfficiency,int noOfPistons)
     {
@@ -15,6 +16,36 @@ class Engine
         this.noOfPistons=noOfPistons;
 
         System.out.println("Constructor called");
+    }
+
+    public Engine(boolean isEngineOn,int currentRpm,int noOfPistons)
+    {
+        this.isEngineOn=isEngineOn;
+        this.currentRpm=currentRpm;
+        this.noOfPistons=noOfPistons;
+    }
+
+    public Engine(boolean isEngineOn)
+    {
+        this.isEngineOn=isEngineOn;
+    }
+
+    void upgradeEngine(int noOfPistons)
+    {
+        this.noOfPistons=noOfPistons;
+    }
+
+    void upgradeEngine(int noOfPistons,int fuelEfficiency)
+    {
+        this.noOfPistons=noOfPistons;
+        this.fuelEfficiency=fuelEfficiency;
+    }
+
+    void upgradeEngine(int noOfPistons,int fuelEfficiency,int rpm)
+    {
+        this.noOfPistons=noOfPistons;
+        this.fuelEfficiency=fuelEfficiency;
+        this.rpm=rpm;
     }
 
     void accelerate()
@@ -70,5 +101,19 @@ class Engine
         return this.currentRpm;
     }
 
+    String getManufacturer()
+    {
+        return this.manufacturer;
+    }
+
+    void setManufacturer(String manufacturer)
+    {
+        this.manufacturer=manufacturer;
+    }
+
+    static void printMessage()
+    {
+        System.out.println("Welcome to Honda! We are among the top manufacturers of Engines");
+    }
 
 }
