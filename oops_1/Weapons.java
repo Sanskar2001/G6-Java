@@ -46,6 +46,7 @@ class Weapons
         
         Gun g1=new Gun("AKM", 60, 7.62f, 60);
 
+        System.out.println(g1.hashCode());
         g1.display();
         g1.setAmmo(160);
         System.out.println(g1.getAmmo());
