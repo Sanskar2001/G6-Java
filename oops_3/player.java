@@ -6,6 +6,7 @@ class Player {
         int health;
         boolean armour;
         boolean helmet;
+        boolean isAlive;
 
 
         public Player(int playerId)
@@ -16,6 +17,7 @@ class Player {
             this.health=100;
             this.armour=false;
             this.helmet=false;
+            this.isAlive=true;
         }
 
         public Player(int playerId,int level,Gun gun)
@@ -26,6 +28,7 @@ class Player {
             this.level=level;
             this.armour=false;
             this.helmet=false;
+            this.isAlive=true;
         }
 
         public Player(int playerId,int level,Gun gun,boolean armour,boolean helmet)
@@ -35,6 +38,7 @@ class Player {
             this.gun=gun;
             this.armour=armour;
             this.helmet=helmet;
+            this.isAlive=true;
 
             if(armour)
             this.health+=50;
@@ -42,6 +46,19 @@ class Player {
             if(helmet)
             this.health+=50;
 
+        }
+
+        void attack(Player p)
+        {  
+            p.health=p.health-this.gun.getDamage();
+            if(p.health<=0)
+            p.isAlive=false;
+        }
+
+        void revive(Player p)
+        {
+            if(p.isAlive==false)
+            p.health=100;
         }
 
 
