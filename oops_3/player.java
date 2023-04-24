@@ -50,6 +50,7 @@ class Player {
 
         void attack(Player p)
         {  
+            System.out.println(this.playerId+" Attacking "+p.playerId);
             p.health=p.health-this.gun.getDamage();
             if(p.health<=0)
             p.isAlive=false;
@@ -59,6 +60,11 @@ class Player {
         {
             if(p.isAlive==false)
             p.health=100;
+        }
+
+        int  getHealth()
+        {
+            return this.health;
         }
 
 
