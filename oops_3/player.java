@@ -67,6 +67,12 @@ class Player {
             return this.health;
         }
 
+      
+
+        void pickUpGun(Gun g)
+        {
+            this.gun=g;
+        }
 
 }
 

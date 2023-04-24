@@ -14,6 +14,9 @@ class game {
         p1.attack(p2);
         System.out.println("Health of p2="+p2.getHealth());
 
+        
+        p1.pickUpGun(g2);
+
         p1.attack(p2);
         System.out.println("Health of p2="+p2.getHealth());
 
