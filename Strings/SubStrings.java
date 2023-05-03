@@ -12,10 +12,23 @@ class SubStrings {
         }
     }
 
+    static void printAllSubstringReverse(String str)
+    {
+        int n=str.length();
+        for(int st=n-1;st>=0;st--)
+        {
+            for(int en=st+1;en<=str.length();en++)
+            {
+                System.out.println(str.substring(st, en));
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
         
         String str="abc";
-        printAllSubstring(str);
+        // printAllSubstring(str);
+        printAllSubstringReverse(str);
     }
 }
