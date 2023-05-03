@@ -47,6 +47,12 @@ class stringDemo
         Car car=new Car(4, 700);
 
         System.out.println(car);
+
+        String str4="world";
+
+        System.out.println(str4.toUpperCase());
+        System.out.println(str4);
+        
         
 
 
