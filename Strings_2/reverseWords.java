@@ -34,7 +34,7 @@
                 i--;
             }
             
-            if(word.isEmpty())
+            if(!word.isEmpty())
             ans+=reverse(word)+" ";
 
             // 
