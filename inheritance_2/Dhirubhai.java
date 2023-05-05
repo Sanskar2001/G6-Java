@@ -12,6 +12,12 @@ class Dhirubhai
         this.reliance=0;
     }
 
+    public Dhirubhai(int vimal,int reliance)
+    {
+        this.vimal=vimal;
+        this.reliance=reliance;
+    }
+
     void workHard()
     {
         vimal++;

@@ -11,17 +11,22 @@ class ambaniFamily {
         // System.out.println(dhirubhai.getNetworth());
 
 
-        // Mukesh mukesh=new Mukesh();
+        Mukesh mukesh=new Mukesh();
+
+        System.out.println(mukesh.reliance);
+        System.out.println(mukesh.vimal);
+        System.out.println(mukesh.reliancePetroleum);
+        System.out.println(mukesh.relianceRetail);
 
         // mukesh.workHard();
 
         // System.out.println(mukesh.getNetworth());
 
-        Akash akash=new Akash();
+        // Akash akash=new Akash();
 
-        akash.workHard();
+        // akash.workHard();
 
-        System.out.println(akash.getNetworth());
+        // System.out.println(akash.getNetworth());
     
     }
     

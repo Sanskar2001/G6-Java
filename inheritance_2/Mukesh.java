@@ -8,8 +8,7 @@ class Mukesh extends Dhirubhai {
     public Mukesh()
     {
 
-        vimal=0;
-        reliance=0;
+        super(10,10);
         reliancePetroleum=0;
         relianceRetail=0;
         System.out.println("Mukesh Ambani is born");
