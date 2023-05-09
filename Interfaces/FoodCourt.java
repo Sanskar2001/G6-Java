@@ -16,6 +16,15 @@ class FoodCourt {
         restraunt2.hireStaff();
         restraunt2.bake();
         restraunt2.fireStaff();
+
+
+        OvenStory ovenStoryRestaurant=new OvenStoryRestaurant();
+        
+        ovenStoryRestaurant.hireStaff();
+        ovenStoryRestaurant.bake();
+        ovenStoryRestaurant.sellPizzas();
+        ovenStoryRestaurant.sellSides();
+        ovenStoryRestaurant.fireStaff();
     }
     
 }
