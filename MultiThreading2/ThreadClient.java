@@ -13,10 +13,16 @@ public class ThreadClient {
 
 
         MyThread myThread=new MyThread("T2");
+        myThread.setName("Thread-2");
+        myThread.setPriority(Thread.MAX_PRIORITY);
+        System.out.println(myThread.isAlive());
         System.out.println(myThread.getName());
         System.out.println(myThread.getPriority());
         System.out.println(myThread.getId());
         System.out.println(myThread.threadId());
         System.out.println(myThread.getState());
+
+        myThread.start();
+        System.out.println(myThread.isAlive());
     }
 }
