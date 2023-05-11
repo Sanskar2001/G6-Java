@@ -28,9 +28,17 @@ class Stack
     }
 
 
-    void push(int ele)
+    void push(int ele) throws StackOverflowException
     {
-     
+        if(isFull())
+        {
+            // throw new Exception("Stack Overflow!!");
+
+            throw new StackOverflowException();
+        }
+
+        top++;
+        arr[top]=ele;
     }
     
 
