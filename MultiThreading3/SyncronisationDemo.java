@@ -45,7 +45,7 @@ class MyPrinter {
     }
     
     
-    public class SyncDemo {
+    public class SyncronisationDemo {
     
         public static void main(String[] args) {
             MyPrinter printer=new MyPrinter();
