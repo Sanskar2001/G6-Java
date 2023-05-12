@@ -41,9 +41,22 @@ class Stack
         arr[top]=ele;
     }
     
-    int peek()
+    int peek() throws StackEmptyException
     {
+        if(isEmpty())
+        {
+        //    throw new Exception("Stack is Empty!!");  
+           throw new StackEmptyException();
+        }
+   
+
         return arr[top];
+    }
+
+    int pop()
+    {
+        
+        return arr[top--];
     }
 
 }
