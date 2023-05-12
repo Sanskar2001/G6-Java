@@ -41,5 +41,9 @@ class Stack
         arr[top]=ele;
     }
     
+    int peek()
+    {
+        return arr[top];
+    }
 
 }
