@@ -1,12 +1,12 @@
 class Stack
 {
-    private int []arr;
-    private int capacity;
-    private int top;
+    protected int []arr;
+    protected int capacity;
+    protected int top;
 
     public Stack(int capacity)
     {
-        this.capacity=capacity;
+       this.capacity=capacity;
         this.arr=new int[capacity];
         this.top=-1;
     }
@@ -62,12 +62,17 @@ class Stack
     }
 
 
-    void display()
+    void display() throws StackEmptyException
     {
+        if(isEmpty())
+        throw new StackEmptyException();
+
         for(int i=top;i>=0;i--)
         {
             System.out.println(arr[i]);
         }
     }
+
+
 
 }
