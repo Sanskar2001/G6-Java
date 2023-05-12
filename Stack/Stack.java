@@ -1,8 +1,8 @@
 class Stack
 {
-    int []arr;
-    int capacity;
-    int top;
+    private int []arr;
+    private int capacity;
+    private int top;
 
     public Stack(int capacity)
     {
@@ -53,10 +53,21 @@ class Stack
         return arr[top];
     }
 
-    int pop()
+    int pop() throws StackEmptyException
     {
-        
+        if(isEmpty())
+        throw new StackEmptyException();
+
         return arr[top--];
+    }
+
+
+    void display()
+    {
+        for(int i=top;i>=0;i--)
+        {
+            System.out.println(arr[i]);
+        }
     }
 
 }
