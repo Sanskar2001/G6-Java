@@ -64,5 +64,26 @@ class LinkedList
 
     }
 
+
+    void deletionAtKthPosition(int k)
+    {
+        if(k==0)
+        {
+            deletionAtHead();
+            return;
+        }
+
+
+        Node tmp=head;
+
+        for(int i=1;i<=(k-1);i++)
+        tmp=tmp.next;
+
+        Node nodeToBeDeleted=tmp.next;
+        tmp.next=nodeToBeDeleted.next;
+        nodeToBeDeleted.next=null;
+
+    }
+
     
 }
