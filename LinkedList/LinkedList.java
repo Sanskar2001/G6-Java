@@ -43,5 +43,26 @@ class LinkedList
 
     }
 
+    void insertionAtKthPosition(int data,int k)
+    {
+
+        if(k==0)
+        {
+            insertionAtHead(data);
+            return;
+        }
+
+        Node tmp=head;
+
+        for(int i=1;i<=(k-1);i++)
+        tmp=tmp.next;
+
+
+        Node newNode=new Node(data);
+        newNode.next=tmp.next;
+        tmp.next=newNode;
+
+    }
+
     
 }
