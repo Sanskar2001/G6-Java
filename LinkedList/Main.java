@@ -35,6 +35,44 @@ class Main {
         return slow;
     }
 
+    static Node detectCycle(Node head)
+    {
+        Node slow=head;
+        Node fast=head;
+
+        while (fast!=null && fast.next!=null) {
+            
+            slow=slow.next;
+            fast=fast.next.next;
+
+            if(slow==fast)
+            return slow;
+        }
+
+        return null;
+    }
+
+
+    static void removeCycle(Node head)
+    {
+
+        Node meetingNode=detectCycle(head);
+
+        Node slow=head;
+        Node fast=meetingNode;
+        Node prev=null;
+
+
+        while(slow!=fast)
+        {
+            slow=slow.next;
+            prev=fast;
+            fast=fast.next;
+        }
+        prev.next=null;
+
+    }
+
 
     public static void main(String[] args) {
         
@@ -47,20 +85,35 @@ class Main {
         ll.insertionAtHead(40);
         ll.insertionAtHead(50);
 
-        ll.insertionAtKthPosition(100, 2);
+        ll.head.next.next.next.next.next=ll.head.next;
+
+        // ll.insertionAtKthPosition(100, 2);
 
         // ll.deletionAtHead();
-        ll.deletionAtKthPosition(0);
+        // ll.deletionAtKthPosition(0);
+
+        // ll.display();
+
+            removeCycle(ll.head);
 
         ll.display();
-        System.out.println();
-        System.out.println(ll.getNodeValue(2));
+
+        // if(detectCycle(ll.head)!=null)
+        // System.out.println("Cycle Exsists");
+        // else
+        // System.out.println("Cycle does'nt exsists");
+
+
+
+
+        // System.out.println();
+        // System.out.println(ll.getNodeValue(2));
         
 
-        System.out.println(getKthFromLast(ll.head, 2).data);
+        // System.out.println(getKthFromLast(ll.head, 2).data);
 
-        Node midNode=getMidNode(ll.head);
-        System.out.println(midNode.data);
+        // Node midNode=getMidNode(ll.head);
+        // System.out.println(midNode.data);
 
         // System.out.println("Length of LL= "+ll.length());
 
