@@ -85,5 +85,31 @@ class LinkedList
 
     }
 
+
+    int length()
+    {
+        int cnt=0;
+        Node tmp=head;
+
+        while (tmp!=null) {
+            cnt++;
+            tmp=tmp.next;
+        }
+        return cnt;
+    }
+
+
+    int getNodeValue(int k)
+    {
+        Node tmp=head;
+
+        for(int i=1;i<=k;i++)
+        tmp=tmp.next;
+
+        return tmp.data;
+    }
+
+
+
     
 }
