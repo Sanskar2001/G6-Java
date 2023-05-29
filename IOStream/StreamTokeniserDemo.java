@@ -16,8 +16,11 @@ class StreamTokeniserDemo {
         // System.out.println(x==StreamTokenizer.TT_WORD);
 
 
-        while(x!=StreamTokenizer.TT_EOF)c
+        while(x!=StreamTokenizer.TT_EOF)
         {
+
+
+            System.out.println("x="+x+" ttype="+streamTokeniser.ttype);
 
             if(x==StreamTokenizer.TT_WORD)
             System.out.println(streamTokeniser.sval);
