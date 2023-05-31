@@ -1,10 +1,21 @@
+import java.util.HashSet;
+
 class DuplicateElements {
-    
 
     static boolean checkDuplicate(int[]arr)
     {
         int n=arr.length;
+        HashSet<Integer>set=new HashSet<Integer>();
 
+        for(int ele:arr)
+        {
+            if(set.contains(ele))
+            return true;
+
+            set.add(ele);
+        }
+
+        return false;
 
 
     }
